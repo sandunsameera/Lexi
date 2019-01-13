@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lexi</string>
     <string name="welcome_to_lexi">Welcome to LEXI</string>
+    <string name="signin">SignIn</string>
 </resources>
