@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "915146932756",
+    "firebase_url": "https://lexi-750af.firebaseio.com",
+    "project_id": "lexi-750af",
+    "storage_bucket": "lexi-750af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915146932756:android:cb8e109fdc39192b",
+        "android_client_info": {
+          "package_name": "com.lolin.deemon_face.lexi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915146932756-b92tu5p3oih5oiirotf417j97qsu9aaj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lolin.deemon_face.lexi",
+            "certificate_hash": "5c8486ac729d9c110c024190c683383d850c5b47"
+          }
+        },
+        {
+          "client_id": "915146932756-dghhn64a441rofo7jl7bshtapu49usvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByHJSy2Eym9ODD6LJn2swGdhDrAhdGnBU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915146932756-dghhn64a441rofo7jl7bshtapu49usvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
