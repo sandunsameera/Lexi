@@ -2,4 +2,9 @@
     <string name="app_name">Lexi</string>
     <string name="welcome_to_lexi">Welcome to LEXI</string>
     <string name="signin">SignIn</string>
+    <string name="choose_your_event">choose_your_event</string>
+    <string name="Wedding">Wedding</string>
+    <string name="Birthday">birthday</string>
+    <string name="Beach_Party">beach_party</string>
+    <string name="chooseyourevent">Choose your event</string>
 </resources>
