@@ -3,11 +3,11 @@ package com.lolin.deemon_face.lexi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class bithdayActivity extends AppCompatActivity {
+public class Birthday extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_bithday);
+        setContentView (R.layout.activity_birthday);
     }
 }

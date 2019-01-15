@@ -7,4 +7,20 @@
     <string name="Birthday">birthday</string>
     <string name="Beach_Party">beach_party</string>
     <string name="chooseyourevent">Choose your event</string>
+    <string name="birthday">Bithday</string>
+    <string name="beachParty">beachParty</string>
+    <string name="signIn">SIGN IN</string>
+    <string name="photographyfragment">photographyFragment</string>
+    <string name="decorating">Decoratingfragment</string>
+    <string name="catering_fragment">catering fragment</string>
+    <string name="title_activity_wedding">wedding</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="photography">Photography</string>
+    <string name="e_jrpaycbi">E.jrpaycbi</string>
+    <string name="decoration">Decoration</string>
+    <string name="Catering">Catering</string>
 </resources>

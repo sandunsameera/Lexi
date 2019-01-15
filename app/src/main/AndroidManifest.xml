@@ -17,9 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".menuActivity" />
-        <activity android:name=".weddingActivity" />
-        <activity android:name=".bithdayActivity" />
-        <activity android:name=".beachParty"></activity>
+        <activity android:name=".Birthday" />
+        <activity android:name=".beachParty" />
+        <activity
+            android:name=".wedding"
+            android:label="@string/title_activity_wedding"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
