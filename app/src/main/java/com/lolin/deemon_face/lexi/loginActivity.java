@@ -46,8 +46,9 @@ public class loginActivity extends AppCompatActivity {
         LoginPage_Btn_signIn.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-
-
+                String email = LoginPage_ET_Email.getText ().toString ().trim ();
+                String  password = LoginPage_ET_Password.getText ().toString ().trim ();
+                signIn (email,password);
 
             }
         });
@@ -81,6 +82,24 @@ public class loginActivity extends AppCompatActivity {
                             }
                         }
 
+
+                    }
+                });
+    }
+
+    public void signIn (String email, String password){
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("Testing", "Sign Up is Successfull" + task.isSuccessful ());
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            if(!task.isSuccessful ()){
+                                Toast.makeText (loginActivity.this,"Sorry Failed",Toast.LENGTH_SHORT).show ();
+                            }
+                        }
 
                     }
                 });
