@@ -55,30 +55,15 @@ public class loginActivity extends AppCompatActivity {
         LoginPage_Btn_Register.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                if(LoginPage_ET_Name == null){
-                    Toast.makeText (loginActivity.this,"Please Enter the name",Toast.LENGTH_SHORT).show ();
-                }
-                else if (LoginPage_ET_Email == null){
-                    Toast.makeText (loginActivity.this,"Please Enter the Email",Toast.LENGTH_SHORT).show ();
-                }
-                else if (LoginPage_ET_Password == null){
-                    Toast.makeText (loginActivity.this,"Please Enter the Password",Toast.LENGTH_SHORT).show ();
-                }
-
-
-                else {
-
 
                     String getMail = LoginPage_ET_Email.getText ().toString ().trim ();
-                    String getPasswrd = LoginPage_ET_Password.getText ().toString ().trim ();
-                    createAccount (getMail, getPasswrd);
+                    String getPassword = LoginPage_ET_Password.getText ().toString ().trim ();
+                    createAccount (getMail, getPassword);
 
                     Intent intent = new Intent (loginActivity.this, menuActivity.class);
                     startActivity (intent);
                 }
 
-
-            }
         });
     }
 
