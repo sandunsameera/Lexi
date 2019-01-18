@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lolin.deemon_face.lexi.beachParty">
+    <item android:id="@+id/icon"
+        android:icon="@drawable/ic_icon"
+        android:title="@string/title"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/SeeAsUser"
+        android:orderInCategory="100"
+        android:title="@string/log_as_user"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SeeAsAdmin"
+        android:orderInCategory="100"
+        android:title="@string/log_as_admin"
+        app:showAsAction="never" />
+</menu>

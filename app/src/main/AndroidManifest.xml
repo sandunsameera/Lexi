@@ -17,11 +17,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".menuActivity" />
-        <activity android:name=".Birthday" />
-        <activity android:name=".beachParty" />
         <activity
             android:name=".wedding"
             android:label="@string/title_activity_wedding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".birthday"
+            android:label="@string/title_activity_birthday"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".beachParty"
+            android:label="@string/title_activity_beach_party"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

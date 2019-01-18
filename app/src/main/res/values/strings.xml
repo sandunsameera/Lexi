@@ -19,8 +19,19 @@
     <string name="tab_text_3">Tab 3</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="photography">Photography</string>
     <string name="e_jrpaycbi">E.jrpaycbi</string>
     <string name="decoration">Decoration</string>
     <string name="Catering">Catering</string>
+    <string name="title_activity_birthday">birthday</string>
+    <string name="photography">Photography</string>
+    <string name="title_activity_beach_party">beachParty</string>
+    <string name="Decorating">Decorating</string>
+    <string name="phorography">Phorography</string>
+    <string name="log_as_user">Log as User</string>
+    <string name="log_as_admin">Log as Admin</string>
+    <string name="title">title</string>
+    <string name="icon">icon</string>
+    <string name="see_as_user">See As User</string>
+
+
 </resources>

@@ -35,7 +35,7 @@ public class menuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent2 = new Intent (menuActivity.this,Birthday.class);
+                Intent intent2 = new Intent (menuActivity.this,birthday.class);
                 startActivity (intent2);
             }
         });
@@ -45,8 +45,8 @@ public class menuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                Intent intent3 = new Intent (menuActivity.this,beachParty.class);
-//                startActivity (intent3);
+                Intent intent3 = new Intent (menuActivity.this,beachParty.class);
+                startActivity (intent3);
             }
         });
 
