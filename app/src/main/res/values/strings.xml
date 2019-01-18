@@ -32,6 +32,12 @@
     <string name="title">title</string>
     <string name="icon">icon</string>
     <string name="see_as_user">See As User</string>
+    <string name="login_here">Login here</string>
+    <string name="pasword">Pasword</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="sign_in">Sign IN</string>
+    <string name="register">Register</string>
 
 
 </resources>
