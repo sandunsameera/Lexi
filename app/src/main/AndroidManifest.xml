@@ -29,7 +29,6 @@
             android:name=".beachParty"
             android:label="@string/title_activity_beach_party"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".loginActivity"></activity>
     </application>
 
 </manifest>
