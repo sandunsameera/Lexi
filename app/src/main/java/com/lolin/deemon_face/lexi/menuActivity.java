@@ -44,7 +44,7 @@ public class menuActivity extends AppCompatActivity {
                     startActivity (new Intent (menuActivity.this,MainActivity.class));
                 }
             }
-        }
+        };
 
         logOutBtn.setOnClickListener (new View.OnClickListener () {
             @Override
