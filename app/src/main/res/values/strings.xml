@@ -39,6 +39,7 @@
     <string name="sign_in">Sign IN</string>
     <string name="register">Register</string>
     <string name="log_out">Log out</string>
+    <string name="add_cater">Add Cater</string>
 
 
 </resources>

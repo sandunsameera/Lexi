@@ -83,6 +83,5 @@ public class menuActivity extends AppCompatActivity {
                 startActivity (intent3);
             }
         });
-
     }
 }

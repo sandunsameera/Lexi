@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class cateringFragment extends Fragment {
     private static final String TAG = "cateringFragment";
+    public Button cateringFragmant_btn_add;
 
     @Nullable
     @Override
