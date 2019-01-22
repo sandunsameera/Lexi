@@ -10,13 +10,16 @@
         android:id="@+id/menu_TV_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="84dp"
         android:text="@string/chooseyourevent"
-        android:textSize="30sp"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_light"/>
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/menu_btn_Wedding"
@@ -49,4 +52,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="86dp"
         android:text="@string/Beach_Party" />
+
+    <Button
+        android:id="@+id/menu_btn_logout"
+        android:layout_width="130sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="359dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/log_out" />
 </RelativeLayout>
