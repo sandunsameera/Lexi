@@ -24,7 +24,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="204dp">
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="345dp">
 
     </com.google.android.gms.common.SignInButton>
+
+    <Button
+        android:id="@+id/Main_Btn_Admin"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120sp"
+        android:layout_marginEnd="120sp"
+        android:layout_marginBottom="232dp"
+        android:text="@string/log_as_admin1"
+        android:background="@android:color/holo_green_light"/>
 </RelativeLayout>

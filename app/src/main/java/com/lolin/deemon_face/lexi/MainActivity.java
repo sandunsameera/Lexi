@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN = 2;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth.AuthStateListener mAuthListner;
+    public Button Main_btn_admin;
 
     @Override
     protected void onStart() {
@@ -43,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance ();
         googleBtn = findViewById (R.id.main_Btn_googleSignIn);
+        Main_btn_admin = findViewById (R.id.Main_Btn_Admin);
+
+        Main_btn_admin.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent (MainActivity.this,AdminActivity.class);
+                startActivity (intent);
+            }
+        });
 
 
 
