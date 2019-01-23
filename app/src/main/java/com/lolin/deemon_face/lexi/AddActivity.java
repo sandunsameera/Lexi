@@ -24,6 +24,7 @@ public class AddActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent (AddActivity.this,AddPhotographer.class);
+                startActivity (intent1);
             }
         });
 
@@ -31,13 +32,15 @@ public class AddActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent (AddActivity.this,AddDecorator.class);
+                startActivity (intent2);
             }
         });
 
         Add_btn_cate.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent (AddActivity.this,AddCater.class);
+                Intent intent3 = new Intent (AddActivity.this,AddCater.class);
+                startActivity (intent3);
             }
         });
     }
