@@ -43,16 +43,19 @@ public class AdminActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
 
         if (item.getTitle () == "add"){
-            Toast.makeText (AdminActivity.this,"Redirect for add activity",Toast.LENGTH_SHORT).show ();
+            Intent intent1 = new Intent (AdminActivity.this,AddActivity.class);
+            startActivity (intent1);
         }
 
         else if (item.getTitle () == "delete"){
 
-            Toast.makeText (AdminActivity.this,"Redirect for delete",Toast.LENGTH_SHORT).show ();
+            Intent intent2 = new Intent (AdminActivity.this,DeleteActivity.class);
+            startActivity (intent2);
 
         }
         else {
-            Toast.makeText (AdminActivity.this,"Redirect for update activity",Toast.LENGTH_SHORT).show ();
+            Intent intent3 = new Intent (AdminActivity.this,UpdateActivity.class);
+            startActivity (intent3);
         }
 
         return super.onContextItemSelected (item);
