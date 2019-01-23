@@ -41,6 +41,10 @@
     <string name="log_out">Log out</string>
     <string name="add_cater">Add Cater</string>
     <string name="log_as_admin1">Log As Admin</string>
+    <string name="this_is_admin_page">This Is admin page</string>
+    <string name="long_press_photography">Long Press Photography</string>
+    <string name="long_press_decorating">Long press Decorating</string>
+    <string name="long_press_catering">Long press catering</string>
 
 
 </resources>
