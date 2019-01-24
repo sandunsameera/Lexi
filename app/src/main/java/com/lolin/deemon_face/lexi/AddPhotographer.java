@@ -30,6 +30,7 @@ public class AddPhotographer extends AppCompatActivity {
                 Firebase mRefChild = mref.child ("Name");
 
                 mRefChild.setValue ("Sandun");
+
             }
         });
 
