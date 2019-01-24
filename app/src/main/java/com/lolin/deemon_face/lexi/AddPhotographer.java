@@ -44,14 +44,14 @@ public class AddPhotographer extends AppCompatActivity {
                 Firebase mRefChildAge= mref.child ("Age");
                 Firebase mRefChildExp= mref.child ("Experience");
                 Firebase mRefChildEmail= mref.child ("Email");
-                Firebase mRefChildphone= mref.child ("Phone");
+                Firebase mRefChildPhone= mref.child ("Phone");
 
                 //Setting up the values
                 mRefChildName.setValue (AddPhotographer_ET_name.getText ().toString ());
                 mRefChildAge.setValue (AddPhotographer_ET_Age.getText ().toString ());
                 mRefChildExp.setValue (AddPhotographer_ET_Expe.getText ().toString ());
                 mRefChildEmail.setValue (AddPhotographer_ET_Email.getText ().toString ());
-                mRefChildphone.setValue (AddPhotographer_ET_phone.getText ().toString ());
+                mRefChildPhone.setValue (AddPhotographer_ET_phone.getText ().toString ());
 
                 Toast.makeText (AddPhotographer.this,"Successfully added",Toast.LENGTH_SHORT).show ();
 
