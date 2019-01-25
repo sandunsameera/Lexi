@@ -54,6 +54,9 @@
     <string name="age">Age</string>
     <string name="experience">Experience</string>
     <string name="enter_name">Enter Name</string>
+    <string name="add_option">Add option</string>
+    <string name="delete_option">Delete Option</string>
+    <string name="update_option">Update option</string>
 
 
 </resources>
