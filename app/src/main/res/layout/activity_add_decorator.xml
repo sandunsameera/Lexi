@@ -4,94 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPhotographer"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    tools:context=".AddPhotographer">
 
     <Button
         android:id="@+id/AddPhotography_btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
         android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
+        app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Email" />
 
     <EditText
         android:id="@+id/AddPhotographer_ET_Phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_background"
         android:ems="10"
-        android:text="@string/phone_number"
         android:inputType="phone"
+        android:padding="10dp"
+        android:text="@string/phone_number"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Experience"
+        app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Experience" />
 
     <EditText
         android:id="@+id/AddPhotographer_ET_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_background"
         android:ems="10"
-        android:text="@string/enter_email"
         android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:text="@string/enter_email"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.727" />
+        app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Phone"
+        app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Phone" />
 
     <EditText
         android:id="@+id/AddPhotographer_ET_Nmae"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="182dp"
+        android:background="@drawable/input_background"
         android:ems="10"
-        android:text="@string/enter_name"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:text="@string/enter_name"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/AddPhotographer_ET_Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_background"
         android:ems="10"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:text="@string/age"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Nmae"
+        app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Nmae" />
 
     <EditText
         android:id="@+id/AddPhotographer_ET_Experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_background"
         android:ems="10"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:text="@string/experience"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Age"
+        app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Age" />
 </android.support.constraint.ConstraintLayout>

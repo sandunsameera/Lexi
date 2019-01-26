@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth.AuthStateListener mAuthListner;
     public Button Main_btn_admin;
-    private AlertDialog mAlertDialog;
 
     @Override
     protected void onStart() {
