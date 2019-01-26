@@ -2,6 +2,7 @@ package com.lolin.deemon_face.lexi;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,19 +37,35 @@ public class AddCater extends AppCompatActivity {
         //Creating connection to database
         mref = new Firebase ("https://lexi-750af.firebaseio.com/Caters");
 //
+
         AddPhotographyer_btn_add.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Age.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
 
-                Toast.makeText (AddCater.this,"Successfully added",Toast.LENGTH_SHORT).show ();
+                String name = AddPhotographer_ET_name.getText ().toString ();
+                String age = AddPhotographer_ET_Age.getText ().toString ();
+                String exp = AddPhotographer_ET_Expe.getText ().toString ();
+                String email = AddPhotographer_ET_Email.getText ().toString ();
+                String phone= AddPhotographer_ET_phone.getText ().toString ();
+
+                if(TextUtils.isEmpty (name) || TextUtils.isEmpty (age) || TextUtils.isEmpty (exp) TextUtils.isEmpty (email) || TextUtils.isEmpty (phone)
+
+                Toast.makeText (AddCater.this, "Please fill the fields", Toast.LENGTH_SHORT).show ();
+
+                else{
+                    Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
+                    ChildRef.push ().setValue (AddPhotographer_ET_Age.getText ().toString ());
+                    ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
+                    ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
+                    ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
+
+                    Toast.makeText (AddCater.this, "Successfully added", Toast.LENGTH_SHORT).show ();
+                }
 
             }
+
         });
 
     }
 }
+
