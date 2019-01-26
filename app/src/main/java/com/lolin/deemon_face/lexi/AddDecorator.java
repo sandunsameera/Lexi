@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddDecorator extends AppCompatActivity {
 
@@ -32,6 +34,8 @@ public class AddDecorator extends AppCompatActivity {
         AddPhotographer_ET_Expe= findViewById (R.id.AddPhotographer_ET_Experience);
         AddPhotographer_ET_Email= findViewById (R.id.AddPhotographer_ET_Email);
         AddPhotographer_ET_phone= findViewById (R.id.AddPhotographer_ET_Phone);
+
+        /*DatabaseReference databaseReference = FirebaseDatabase.getInstance ().setReferenceFromUrl();*/
 
         //Creating connection to database
         mref = new Firebase ("https://lexi-750af.firebaseio.com/Decorators");

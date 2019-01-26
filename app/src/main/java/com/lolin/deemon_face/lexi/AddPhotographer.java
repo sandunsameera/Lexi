@@ -1,5 +1,6 @@
 package com.lolin.deemon_face.lexi;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,6 +19,7 @@ public class AddPhotographer extends AppCompatActivity {
     public EditText AddPhotographer_ET_Expe;
     public EditText AddPhotographer_ET_Email;
     public EditText AddPhotographer_ET_phone;
+    private ProgressDialog mProgressDialog;
 
 
     @Override
@@ -25,6 +27,8 @@ public class AddPhotographer extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_add_photographer);
         Firebase.setAndroidContext(this);
+
+        mProgressDialog = new ProgressDialog (this);
 
         AddPhotographyer_btn_add = findViewById (R.id.AddPhotography_btn_add);
         AddPhotographer_ET_name = findViewById (R.id.AddPhotographer_ET_Nmae);
@@ -39,11 +43,17 @@ public class AddPhotographer extends AppCompatActivity {
         AddPhotographyer_btn_add.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
+
+                mProgressDialog.setMessage ("uploading the details..");
+                mProgressDialog.show ();
+
                 Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
                 ChildRef.push ().setValue (AddPhotographer_ET_Age.getText ().toString ());
                 ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
                 ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
                 ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
+                mProgressDialog.dismiss ();
+
 
                 Toast.makeText (AddPhotographer.this,"Successfully added",Toast.LENGTH_SHORT).show ();
 

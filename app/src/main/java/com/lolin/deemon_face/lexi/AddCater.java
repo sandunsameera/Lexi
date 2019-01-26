@@ -48,9 +48,11 @@ public class AddCater extends AppCompatActivity {
                 String email = AddPhotographer_ET_Email.getText ().toString ();
                 String phone= AddPhotographer_ET_phone.getText ().toString ();
 
-                if(TextUtils.isEmpty (name) || TextUtils.isEmpty (age) || TextUtils.isEmpty (exp) TextUtils.isEmpty (email) || TextUtils.isEmpty (phone)
+                if(TextUtils.isEmpty (name) || TextUtils.isEmpty (age) || TextUtils.isEmpty (exp) || TextUtils.isEmpty (email) || TextUtils.isEmpty (phone)){
 
-                Toast.makeText (AddCater.this, "Please fill the fields", Toast.LENGTH_SHORT).show ();
+
+                    Toast.makeText (AddCater.this, "Please fill the fields", Toast.LENGTH_SHORT).show ();
+                }
 
                 else{
                     Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
@@ -58,7 +60,6 @@ public class AddCater extends AppCompatActivity {
                     ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
                     ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
                     ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
-
                     Toast.makeText (AddCater.this, "Successfully added", Toast.LENGTH_SHORT).show ();
                 }
 

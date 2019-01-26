@@ -1,8 +1,10 @@
 package com.lolin.deemon_face.lexi;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -27,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     SignInButton googleBtn;
     FirebaseAuth mAuth;
+    private ProgressDialog mProgressDialog;
     private final static int RC_SIGN_IN = 2;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth.AuthStateListener mAuthListner;
     public Button Main_btn_admin;
+    private AlertDialog mAlertDialog;
 
     @Override
     protected void onStart() {
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         googleBtn = findViewById (R.id.main_Btn_googleSignIn);
         Main_btn_admin = findViewById (R.id.Main_Btn_Admin);
 
+        mProgressDialog = new ProgressDialog (this);
+
         Main_btn_admin.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
@@ -61,7 +67,12 @@ public class MainActivity extends AppCompatActivity {
         googleBtn.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
+                mProgressDialog.setMessage ("Logging in please wait!");
+                mProgressDialog.show ();
                 signIn ();
+
+                mProgressDialog.dismiss ();
+
             }
         });
 
