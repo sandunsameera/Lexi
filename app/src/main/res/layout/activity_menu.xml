@@ -26,7 +26,7 @@
 
     <Button
         android:id="@+id/menu_btn_Wedding"
-        android:layout_width="130sp"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/menu_btn_Birthday"
-        android:layout_width="130sp"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/menu_btn_beachParty"
-        android:layout_width="150sp"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -67,7 +67,7 @@
 
     <Button
         android:id="@+id/menu_btn_logout"
-        android:layout_width="130sp"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
