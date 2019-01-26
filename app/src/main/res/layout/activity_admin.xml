@@ -16,7 +16,6 @@
         android:padding="10dp"
         android:text="@string/add_option"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,27 +23,27 @@
         android:id="@+id/admin_btn_addDecorator"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/btn_background"
         android:padding="10dp"
         android:text="@string/delete_option"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_btn_addPhotographer" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/admin_btn_addCater"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/btn_background"
         android:padding="10dp"
         android:text="@string/update_option"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_btn_addDecorator" />
+        app:layout_constraintTop_toBottomOf="@+id/admin_btn_addPhotographer" />
 </android.support.constraint.ConstraintLayout>
