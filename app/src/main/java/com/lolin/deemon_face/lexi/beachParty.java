@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -21,6 +22,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import com.firebase.client.Firebase;
 
 public class beachParty extends AppCompatActivity{
 
@@ -52,6 +55,7 @@ public class beachParty extends AppCompatActivity{
 //                        .setAction ("Action", null).show ();
 //            }
 //        });
+
     }
 
     @Override
