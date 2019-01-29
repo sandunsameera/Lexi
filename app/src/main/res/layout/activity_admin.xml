@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.LinearLayoutCompat xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
@@ -12,38 +12,34 @@
         android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
+        android:layout_marginLeft="75dp"
         android:background="@drawable/btn_background"
         android:padding="10dp"
         android:text="@string/add_option"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <Button
         android:id="@+id/admin_btn_addDecorator"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/btn_background"
+        android:layout_marginLeft="-250dp"
         android:padding="10dp"
         android:text="@string/delete_option"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="400dp"
         app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/admin_btn_addCater"
         android:layout_width="250sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="-250dp"
         android:background="@drawable/btn_background"
         android:padding="10dp"
         android:text="@string/update_option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/admin_btn_addPhotographer" />
-</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.LinearLayoutCompat>
