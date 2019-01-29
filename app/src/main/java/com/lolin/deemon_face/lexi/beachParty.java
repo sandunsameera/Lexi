@@ -83,7 +83,7 @@ public class beachParty extends AppCompatActivity{
     private void setupViewPager(ViewPager mViewPager) {
 
         SectionPageAdapter adapter = new SectionPageAdapter (getSupportFragmentManager ());
-        adapter.addFragment (new photographyFragment (),"photography");
+//        adapter.addFragment (new photographyFragment (),"photography");
         adapter.addFragment (new decorationFragment (),"decorating");
         adapter.addFragment (new cateringFragment (),"catering");
 

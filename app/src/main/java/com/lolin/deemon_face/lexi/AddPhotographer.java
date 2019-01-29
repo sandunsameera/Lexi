@@ -13,7 +13,7 @@ import com.firebase.client.Firebase;
 public class AddPhotographer extends AppCompatActivity {
 
     public Button AddPhotographyer_btn_add;
-    private Firebase mref;
+    private Firebase mRootRef;
     public EditText AddPhotographer_ET_name;
     public EditText AddPhotographer_ET_Age;
     public EditText AddPhotographer_ET_Expe;
@@ -36,27 +36,43 @@ public class AddPhotographer extends AppCompatActivity {
         AddPhotographer_ET_Expe= findViewById (R.id.AddPhotographer_ET_Experience);
         AddPhotographer_ET_Email= findViewById (R.id.AddPhotographer_ET_Email);
         AddPhotographer_ET_phone= findViewById (R.id.AddPhotographer_ET_Phone);
+        String urlName = AddPhotographer_ET_name.getText ().toString ();
+
+        String url = ("https://lexi-750af.firebaseio.com/Photographers " + urlName);
 
         //Creating connection to database
-        mref = new Firebase ("https://lexi-750af.firebaseio.com/Photographers");
+        mRootRef= new Firebase (url);
 //
         AddPhotographyer_btn_add.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
 
-                mProgressDialog.setMessage ("uploading the details..");
-                mProgressDialog.show ();
-
-                Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Age.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
-                ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
-                mProgressDialog.dismiss ();
 
 
-                Toast.makeText (AddPhotographer.this,"Successfully added",Toast.LENGTH_SHORT).show ();
+//                //name
+//                String name = AddPhotographer_ET_name.getText ().toString ();
+//                Firebase childref = mRootRef.child ("Name");
+//                childref.setValue (name);
 
+                //Age
+                String age = AddPhotographer_ET_Age.getText ().toString ();
+                Firebase childref1 = mRootRef.child ("Age");
+                childref1.setValue (age);
+
+                //Exp
+                String exp = AddPhotographer_ET_Expe.getText ().toString ();
+                Firebase childref2 = mRootRef.child ("Experience");
+                childref2.setValue (exp);
+
+                //Tp
+                String tp = AddPhotographer_ET_phone.getText ().toString ();
+                Firebase childref3 = mRootRef.child ("Telephone");
+                childref3.setValue (tp);
+
+                //Email
+                String email = AddPhotographer_ET_Email.getText ().toString ();
+                Firebase childref4 = mRootRef.child ("Email");
+                childref4.setValue (email);
             }
         });
 

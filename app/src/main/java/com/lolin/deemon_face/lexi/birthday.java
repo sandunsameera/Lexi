@@ -68,7 +68,7 @@ public class birthday extends AppCompatActivity {
 
     private void setupViewPager(ViewPager mViewPager) {
         SectionPageAdapter adapter = new SectionPageAdapter (getSupportFragmentManager ());
-        adapter.addFragment (new photographyFragment (), "Photography");
+        /*adapter.addFragment (new photographyFragment (), "Photography");*/
         adapter.addFragment (new decorationFragment (), "Decorations");
         adapter.addFragment (new cateringFragment (), "Catering");
         mViewPager.setAdapter (adapter);

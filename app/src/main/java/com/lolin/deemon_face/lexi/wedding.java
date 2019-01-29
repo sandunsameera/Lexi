@@ -58,7 +58,7 @@ public class wedding extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager){
         SectionPageAdapter adapter = new SectionPageAdapter (getSupportFragmentManager ());
-        adapter.addFragment (new photographyFragment (),"photography");
+//        adapter.addFragment (new photographyFragment (),"photography");
         adapter.addFragment (new decorationFragment (),"decoration");
         adapter.addFragment (new cateringFragment (),"catering");
         viewPager.setAdapter (adapter);
