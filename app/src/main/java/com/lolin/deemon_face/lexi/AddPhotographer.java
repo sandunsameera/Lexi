@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class AddPhotographer extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class AddPhotographer extends AppCompatActivity {
     public EditText AddPhotographer_ET_Email;
     public EditText AddPhotographer_ET_phone;
     private ProgressDialog mProgressDialog;
+    private DatabaseReference mDatabase;
 
 
     @Override
@@ -36,9 +41,15 @@ public class AddPhotographer extends AppCompatActivity {
         AddPhotographer_ET_Expe= findViewById (R.id.AddPhotographer_ET_Experience);
         AddPhotographer_ET_Email= findViewById (R.id.AddPhotographer_ET_Email);
         AddPhotographer_ET_phone= findViewById (R.id.AddPhotographer_ET_Phone);
-        String urlName = AddPhotographer_ET_name.getText ().toString ();
 
-        String url = ("https://lexi-750af.firebaseio.com/Photographers " + urlName);
+
+        final String Name = AddPhotographer_ET_name.getText ().toString ();
+        final String Age = AddPhotographer_ET_Age.getText ().toString ();
+        final String Exp = AddPhotographer_ET_Expe.getText ().toString ();
+        final String Email = AddPhotographer_ET_Email.getText ().toString ();
+        final String Phone = AddPhotographer_ET_phone.getText ().toString ();
+
+        String url = ("https://lexi-750af.firebaseio.com/Photographers ");
 
         //Creating connection to database
         mRootRef= new Firebase (url);
@@ -49,30 +60,17 @@ public class AddPhotographer extends AppCompatActivity {
 
 
 
-//                //name
-//                String name = AddPhotographer_ET_name.getText ().toString ();
-//                Firebase childref = mRootRef.child ("Name");
-//                childref.setValue (name);
+                mDatabase = FirebaseDatabase.getInstance ().getReference ().child ("Photographers").push ();
 
-                //Age
-                String age = AddPhotographer_ET_Age.getText ().toString ();
-                Firebase childref1 = mRootRef.child ("Age");
-                childref1.setValue (age);
+                HashMap<String, String> photographerMap = new HashMap<> ();
+                photographerMap.put ("Name",Name);
+                photographerMap.put ("Age",Age);
+                photographerMap.put ("Experience",Exp);
+                photographerMap.put ("Phone",Phone);
+                photographerMap.put ("Email",Email);
 
-                //Exp
-                String exp = AddPhotographer_ET_Expe.getText ().toString ();
-                Firebase childref2 = mRootRef.child ("Experience");
-                childref2.setValue (exp);
+                mDatabase.setValue (photographerMap);
 
-                //Tp
-                String tp = AddPhotographer_ET_phone.getText ().toString ();
-                Firebase childref3 = mRootRef.child ("Telephone");
-                childref3.setValue (tp);
-
-                //Email
-                String email = AddPhotographer_ET_Email.getText ().toString ();
-                Firebase childref4 = mRootRef.child ("Email");
-                childref4.setValue (email);
             }
         });
 
