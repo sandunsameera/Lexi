@@ -47,11 +47,11 @@ public class AddCater extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String name = AddPhotographer_ET_name.getText ().toString ();
-                String age = AddPhotographer_ET_Age.getText ().toString ();
-                String exp = AddPhotographer_ET_Expe.getText ().toString ();
-                String email = AddPhotographer_ET_Email.getText ().toString ();
-                String phone= AddPhotographer_ET_phone.getText ().toString ();
+                final String name = AddPhotographer_ET_name.getText ().toString ();
+                final String age = AddPhotographer_ET_Age.getText ().toString ();
+                final String exp = AddPhotographer_ET_Expe.getText ().toString ();
+                final String email = AddPhotographer_ET_Email.getText ().toString ();
+                final String phone= AddPhotographer_ET_phone.getText ().toString ();
 
                 if(TextUtils.isEmpty (name) || TextUtils.isEmpty (age) || TextUtils.isEmpty (exp) || TextUtils.isEmpty (email) || TextUtils.isEmpty (phone)){
 
@@ -71,7 +71,7 @@ public class AddCater extends AppCompatActivity {
 
                     mDatabase.setValue (photographerMap);
                     Toast.makeText (AddCater.this,"Successfully added",Toast.LENGTH_SHORT).show ();
-                    Toast.makeText (AddCater.this, "Successfully added", Toast.LENGTH_SHORT).show ();
+//                    Toast.makeText (AddCater.this, "Successfully added", Toast.LENGTH_SHORT).show ();
                 }
 
             }
