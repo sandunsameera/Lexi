@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class AddCater extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class AddCater extends AppCompatActivity {
     public EditText AddPhotographer_ET_Expe;
     public EditText AddPhotographer_ET_Email;
     public EditText AddPhotographer_ET_phone;
+    private DatabaseReference mDatabase;
 
 
     @Override
@@ -55,11 +60,17 @@ public class AddCater extends AppCompatActivity {
                 }
 
                 else{
-                    Firebase ChildRef = mref.child (AddPhotographer_ET_name.getText ().toString ());
-                    ChildRef.push ().setValue (AddPhotographer_ET_Age.getText ().toString ());
-                    ChildRef.push ().setValue (AddPhotographer_ET_Expe.getText ().toString ());
-                    ChildRef.push ().setValue (AddPhotographer_ET_Email.getText ().toString ());
-                    ChildRef.push ().setValue (AddPhotographer_ET_phone.getText ().toString ());
+                    mDatabase = FirebaseDatabase.getInstance ().getReference ().child ("Photographers").push ();
+
+                    HashMap<String, String> photographerMap = new HashMap<> ();
+                    photographerMap.put ("Name",name);
+                    photographerMap.put ("Age",age);
+                    photographerMap.put ("Experience",exp);
+                    photographerMap.put ("Phone",phone);
+                    photographerMap.put ("Email",email);
+
+                    mDatabase.setValue (photographerMap);
+                    Toast.makeText (AddCater.this,"Successfully added",Toast.LENGTH_SHORT).show ();
                     Toast.makeText (AddCater.this, "Successfully added", Toast.LENGTH_SHORT).show ();
                 }
 

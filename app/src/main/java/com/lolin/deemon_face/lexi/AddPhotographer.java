@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.firebase.client.Firebase;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,7 @@ public class AddPhotographer extends AppCompatActivity {
     public EditText AddPhotographer_ET_phone;
     private ProgressDialog mProgressDialog;
     private DatabaseReference mDatabase;
+    private Toolbar mToolbar;
 
 
     @Override
@@ -32,6 +34,12 @@ public class AddPhotographer extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_add_photographer);
         Firebase.setAndroidContext(this);
+
+        //Toolbar set
+        mToolbar = findViewById (R.id.toolbar);
+//        setSupportActionBar (mToolbar);
+        getSupportActionBar ().setTitle ("Create Account ");
+        getSupportActionBar ().setDisplayHomeAsUpEnabled (true);
 
         mProgressDialog = new ProgressDialog (this);
 
@@ -70,6 +78,7 @@ public class AddPhotographer extends AppCompatActivity {
                 photographerMap.put ("Email",Email);
 
                 mDatabase.setValue (photographerMap);
+                Toast.makeText (AddPhotographer.this,"Successfully added",Toast.LENGTH_SHORT).show ();
 
             }
         });
