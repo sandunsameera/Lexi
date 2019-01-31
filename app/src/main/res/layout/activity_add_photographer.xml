@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Email" />
 
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:id="@+id/AddPhotographer_ET_Phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,12 +31,11 @@
         android:ems="10"
         android:inputType="phone"
         android:padding="10dp"
-        android:text="@string/phone_number"
+        android:hint="@string/phone_number"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Experience"
         app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Experience" />
-
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:id="@+id/AddPhotographer_ET_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,12 +44,11 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:text="@string/enter_email"
+        android:hint="@string/enter_email"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Phone"
         app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Phone" />
-
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:id="@+id/AddPhotographer_ET_Nmae"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,15 +57,14 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="@string/enter_name"
+        android:hint="@string/enter_name"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01" />
-
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:id="@+id/AddPhotographer_ET_Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,12 +73,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="@string/age"
+        android:hint="@string/age"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Nmae"
         app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Nmae" />
-
-    <EditText
+    <android.support.design.widget.TextInputEditText
         android:id="@+id/AddPhotographer_ET_Experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,8 +86,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:text="@string/experience"
+        android:hint="@string/experience"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="@+id/AddPhotographer_ET_Age"
         app:layout_constraintTop_toBottomOf="@+id/AddPhotographer_ET_Age" />
-</android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
