@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class cateringFragment extends Fragment {
     private static final String TAG = "cateringFragment";
-    public Button cateringFragmant_btn_add;
+
 
     @Nullable
     @Override
