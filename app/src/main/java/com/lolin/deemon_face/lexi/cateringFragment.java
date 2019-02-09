@@ -14,13 +14,16 @@ import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class cateringFragment extends Fragment {
     private static final String TAG = "cateringFragment";
     private View catersView;
-    private RecyclerView caters;
+    private RecyclerView caters,usersref;
     private DatabaseReference catersref;
 
 
@@ -50,9 +53,30 @@ public class cateringFragment extends Fragment {
                 .setQuery (catersref,caters.class)
                 .build ();
 
-        FirebaseRecyclerAdapter<caters , catersViewHolder> adapter = new FirebaseRecyclerAdapter<com.lolin.deemon_face.lexi.caters, catersViewHolder> () {
+        final FirebaseRecyclerAdapter<caters , catersViewHolder> adapter = new FirebaseRecyclerAdapter<com.lolin.deemon_face.lexi.caters, catersViewHolder> (options) {
             @Override
-            protected void onBindViewHolder(@NonNull catersViewHolder holder, int position, @NonNull com.lolin.deemon_face.lexi.caters model) {
+            protected void onBindViewHolder(@NonNull final catersViewHolder holder, int position, @NonNull com.lolin.deemon_face.lexi.caters model) {
+
+                String caterId = getRef (position).getKey ();
+                catersref.child (caterId).addValueEventListener (new ValueEventListener () {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String caterName = dataSnapshot.child ("Name").getValue ().toString ();
+                        String caterAge = dataSnapshot.child ("Age").getValue ().toString ();
+                        String caterExp = dataSnapshot.child ("Experience").getValue ().toString ();
+                        String caterEmail = dataSnapshot.child ("Email").getValue ().toString ();
+
+                        holder.Name.setText (caterName);
+                        holder.Age.setText (caterAge);
+                        holder.Experience.setText (caterExp);
+                        holder.Email.setText (caterEmail);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
 
             }
 
@@ -65,6 +89,9 @@ public class cateringFragment extends Fragment {
                 return viewHolder;
             }
         };
+
+        caters.setAdapter (adapter);
+        adapter.startListening ();
 
 
     }
