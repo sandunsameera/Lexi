@@ -11,10 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class cateringFragment extends Fragment {
     private static final String TAG = "cateringFragment";
     private View catersView;
     private RecyclerView caters;
+    private DatabaseReference catersref;
 
 
     public cateringFragment(){
@@ -30,6 +35,17 @@ public class cateringFragment extends Fragment {
         caters = catersView.findViewById (R.id.catering_recyclerView);
         caters.setLayoutManager (new LinearLayoutManager(getContext ()));
 
+        catersref = FirebaseDatabase.getInstance ().getReference ().child ("caters");
         return catersView;
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart ();
+        FirebaseRecyclerOptions options
+                =new FirebaseRecyclerOptions.Builder<caters> ()
+                .setQuery (catersref,caters.class)
+                .build ();
     }
 }

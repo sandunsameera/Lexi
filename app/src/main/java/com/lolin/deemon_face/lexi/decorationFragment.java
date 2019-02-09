@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 public class decorationFragment extends Fragment {
     private static final String TAG = "decorationFragment";
+    private View view;
 
     @Nullable
     @Override
