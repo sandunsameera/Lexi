@@ -65,10 +65,10 @@ public class photographyFragment extends Fragment {
                         String caterExp = dataSnapshot.child ("Experience").getValue ().toString ();
                         String caterEmail = dataSnapshot.child ("Email").getValue ().toString ();
 
-                        holder.Name.setText (caterName);
-                        holder.Age.setText (caterAge);
-                        holder.Experience.setText (caterExp);
-                        holder.Email.setText (caterEmail);
+//                        holder.Name.setText (caterName);
+//                        holder.Age.setText (caterAge);
+//                        holder.Experience.setText (caterExp);
+//                        holder.Email.setText (caterEmail);
                     }
 
                 });
